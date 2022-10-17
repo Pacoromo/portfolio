@@ -1,4 +1,4 @@
-@use "./variables" as *;
+// @use "./variables" as *;
 
 // Adapted from some examples found in:
 
@@ -7,10 +7,9 @@
 
 //Font Face
 
-/* Usage:
+// Usage:
+//@include font-face(family-name, file-name, weight)
 
-@include font-face(family-name, file-name, weight)
-*/
 @mixin font-face($family-name, $file-name, $weight: 400) {
     @font-face {
         font-family: $family-name;
@@ -23,16 +22,11 @@
 
 // Font Styles
 
-/* Usage:
-@include font-{name}(family, size, color, weight, line height, letter-spacing, text-transform, text-align)
-*/
+// Usage:
+//@include font-setup(family, size, color, line height, letter-spacing, text-transform, text-align)
 
-//Calibre family
-
-@mixin font-calibre($family, $size: false, $colour: false, $weight: false, $lh: false, $ls: false, $tt: false, $ta: false) {
-    @if $family {
-        font-family: $family,"Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-    }
+@mixin font-setup($family, $size: false, $colour: false, $lh: false, $ls: false, $tt: false, $ta: false) {
+    font-family: $family;
 
     @if $size {
         font-size: $size;
@@ -40,46 +34,6 @@
 
     @if $colour {
         color: $colour;
-    }
-
-    @if $weight {
-        font-weight: $weight;
-    }
-
-    @if $lh {
-        line-height: $lh;
-    }
-
-    @if $ls {
-        letter-spacing: $ls;
-    }
-
-    @if $tt {
-        text-transform: $tt;
-    }
-
-    @if $ta {
-        text-align: $ta;
-    }
-}
-
-//SF Mono family
-
-@mixin font-sfmono($family, $size: false, $colour: false, $weight: false, $lh: false, $ls: false, $tt: false, $ta: false) {
-    @if $family {
-        font-family: $family,"Fira Code", "Fira Mono", "Roboto Mono", monospace;
-    }
-
-    @if $size {
-        font-size: $size;
-    }
-
-    @if $colour {
-        color: $colour;
-    }
-
-    @if $weight {
-        font-weight: $weight;
     }
 
     @if $lh {
@@ -101,12 +55,10 @@
 
 //https://www.developerdrive.com/10-best-sass-mixins-for-web-developers/
 
-//Absoulute Positioning
+//Absolute Positioning
 
-/* Usage:
-div {
-    @include abs-position(100px, 100px, auto, auto);
- }*/
+// Usage:
+//div {@include abs-position(100px, 100px, auto, auto);}
 
 @mixin abs-position ($top, $right, $bottom, $left) {
     position: absolute;
@@ -118,30 +70,35 @@ div {
 
 //Madia queries for mobile first
 
-/* Usage:
-
-@include breakpoint(large) {
-   div {
-      font-size: 2rem;
-      line-height: 1.4;
-   }
-}*/
+// Usage:
+//@include breakpoint(largeScreen) {
+//   div {
+//      font-size: 2rem;
+//      line-height: 1.4;
+//   }
+//}
 
 @mixin breakpoint($point) {
-    @if $point ==large {
-        @media only screen and (min-width: 1366px) {
+    @if $point ==xlargeScreen {
+        @media only screen and (min-width: 1200px) {
             @content;
         }
     }
 
-    @else if $point ==desktop {
-        @media only screen and (min-width: 1024px) {
+    @else if $point ==largeScreen {
+        @media only screen and (min-width: 992px) {
             @content;
         }
     }
 
-    @else if $point ==tablet {
-        @media only screen and (min-width: 600px) {
+    @else if $point ==mediumScreen {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==smallScreen {
+        @media only screen and (min-width: 576px) {
             @content;
         }
     }

@@ -1,3 +1,23 @@
+@font-face {
+  font-family: "Calibre Regular", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  src: url("../assets/fonts/Calibre-Regular.woff2") format("woff2"), url("../assets/fonts/Calibre-Regular.woff") format("woff"), url("../assets/fonts/Calibre-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Calibre Medium", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  src: url("../assets/fonts/Calibre-Medium.woff2") format("woff2"), url("../assets/fonts/Calibre-Medium.woff") format("woff"), url("../assets/fonts/Calibre-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Calibre Semi-Bold", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  src: url("../assets/fonts/Calibre-Semibold.woff2") format("woff2"), url("../assets/fonts/Calibre-Semibold.woff") format("woff"), url("../assets/fonts/Calibre-Semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SF Mono Regular" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  src: url("../assets/fonts/SFMono-Regular.woff2") format("woff2"), url("../assets/fonts/SFMono-Regular.woff") format("woff"), url("../assets/fonts/SFMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -258,6 +278,10 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+html {
+  font-size: 125%;
 }
 
 ul,

@@ -1,6 +1,5 @@
 // Styling  Guide
 
-
 //Color Reference
 $navy: #0a192f;
 $navyLight: #112240;
@@ -12,3 +11,14 @@ $white: #e6f1ff;
 $accentColour: #64ffda;
 
 //Fonts
+
+$baseFontSize: 1rem; //(20px)
+$minimumFontSize: .8rem; //(16px)
+
+$primaryFontRegular: "Calibre Regular", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+$primaryFontMedium: "Calibre Medium", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+$primaryFontSemiBold: "Calibre Semi-Bold", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+
+$secondaryFontRegular: "SF Mono Regular" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+// $secondaryFontMedium: "SF Mono Medium" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+// $secondaryFontSemiBold: "SF Mono Semi-Bold" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
