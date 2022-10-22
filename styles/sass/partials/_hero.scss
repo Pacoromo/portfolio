@@ -1,0 +1,64 @@
+@use "./variables" as *;
+
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+h1 {
+    margin: 0 0 10px 0;
+}
+
+h1 span {
+    display: block;
+    margin: 0px 0px 20px 2px;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.more-content-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow-inner {
+    background-color: $accentColour;
+    height: 2px;
+    border-radius: $borderRadius;
+    opacity: 0;
+    
+    &.top {
+        width: 100%;
+        animation: .1s linear 10.1s forwards heroArrow;
+    }
+
+    &.mid {
+        width: 55%;
+        animation: .1s linear 10.2s forwards heroArrow;
+    }
+
+    &.bottom {
+        width: 20%;
+        animation: .1s linear 10.3s forwards heroArrow;
+    }
+}

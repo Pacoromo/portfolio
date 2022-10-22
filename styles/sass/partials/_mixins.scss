@@ -23,13 +23,17 @@
 // Font Styles
 
 // Usage:
-//@include font-setup(family, size, color, line height, letter-spacing, text-transform, text-align)
+//@include font-setup(family, size, weight, color, line height, letter-spacing, text-transform, text-align)
 
-@mixin font-setup($family, $size: false, $colour: false, $lh: false, $ls: false, $tt: false, $ta: false) {
+@mixin font-setup($family, $size: false, $weight: false, $colour: false, $lh: false, $ls: false, $tt: false, $ta: false) {
     font-family: $family;
 
     @if $size {
         font-size: $size;
+    }
+
+    @if $weight {
+        font-weight: $weight;
     }
 
     @if $colour {

@@ -10,28 +10,37 @@ html {
 // Font Styles
 
 // Usage:
-//@include font-setup(family, size, color, line height, letter-spacing, text-transform, text-align)
+//@include font-setup(family, size, weight, color, line height, letter-spacing, text-transform, text-align)
 
 .skip-link {
-    @include font-setup ($secondaryFontRegular, $minimumFontSize)
+    @include font-setup($secondaryFont, $minimumFontSize, 400);
 }
 
 body {
-   @include font-setup($primaryFontRegular, $minimumFontSize, $slate);
-   @include breakpoint(smallScreen){
-    font-size: $baseFontSize;
-   }
-    
- }
+    @include font-setup($primaryFont, $minimumFontSize, 400, $slate);
 
- .main-nav {
-    @include font-setup($secondaryFontRegular, 0.7rem, $slateLightest, null, null, capitalize );
-    .side-bar-menu {
-        font-size: clamp(0.7rem, 4vw, $minimumFontSize);
+    @include breakpoint(smallScreen) {
+        font-size: $baseFontSize;
     }
- }
+}
+
+.main-nav {
+    @include font-setup($secondaryFont, 0.7rem, 400, $slateLightest, null, null, capitalize);
+}
+
+.side-bar-menu {
+    font-size: clamp(0.7rem, 4vw, $minimumFontSize);
+}
 
 
-// h2 {
+h1 {
+    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, $slateLightest, 1.1);
+}
 
-// }
+h1 span {
+    @include font-setup($secondaryFont, clamp(14px, 5vw, 16px), 400, $accentColour)
+}
+
+h2 {
+    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600);
+}
