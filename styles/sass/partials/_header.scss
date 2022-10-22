@@ -82,8 +82,13 @@
     padding: .75rem 1rem;
     margin-left: 15px;
 
-    &:hover {
+    &:hover,
+    &:focus {
         background-color: $accentColourActive;
+    }
+    &:active{
+        color: $navy;
+        background-color: $accentColour;
     }
 }
 

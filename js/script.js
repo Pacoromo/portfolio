@@ -5,6 +5,9 @@ const app = {};
 
 
 
+
+
+//Button Listener
 app.menuBtnListener = () => {
     const menuBtn = document.querySelector(".ham-btn");
     const slideOutMenu = document.querySelector(".side-bar-menu");
