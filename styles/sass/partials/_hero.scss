@@ -40,25 +40,3 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-
-.arrow-inner {
-    background-color: $accentColour;
-    height: 2px;
-    border-radius: $borderRadius;
-    opacity: 0;
-    
-    &.top {
-        width: 100%;
-        animation: .1s linear 10.1s forwards heroArrow;
-    }
-
-    &.mid {
-        width: 55%;
-        animation: .1s linear 10.2s forwards heroArrow;
-    }
-
-    &.bottom {
-        width: 20%;
-        animation: .1s linear 10.3s forwards heroArrow;
-    }
-}

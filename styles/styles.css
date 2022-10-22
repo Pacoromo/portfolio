@@ -689,47 +689,7 @@ p {
           justify-content: space-between;
 }
 
-.arrow-inner {
-  background-color: #64ffda;
-  height: 2px;
-  border-radius: 4px;
-  opacity: 0;
-}
-.arrow-inner.top {
-  width: 100%;
-  -webkit-animation: 0.1s linear 10.1s forwards heroArrow;
-          animation: 0.1s linear 10.1s forwards heroArrow;
-}
-.arrow-inner.mid {
-  width: 55%;
-  -webkit-animation: 0.1s linear 10.2s forwards heroArrow;
-          animation: 0.1s linear 10.2s forwards heroArrow;
-}
-.arrow-inner.bottom {
-  width: 20%;
-  -webkit-animation: 0.1s linear 10.3s forwards heroArrow;
-          animation: 0.1s linear 10.3s forwards heroArrow;
-}
-
 .skills-section .heading {
   color: #ccd6f6;
   text-align: center;
-}
-
-@-webkit-keyframes heroArrow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes heroArrow {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
