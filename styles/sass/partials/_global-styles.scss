@@ -2,8 +2,17 @@
 
 //Stripping Styles
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
 ul,
-li {
+li,
+figure {
     margin: 0;
     padding: 0;
 }
@@ -41,6 +50,7 @@ button {
 
 html {
     scrollbar-color: $slate $navy;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -51,6 +61,10 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
+}
+
+section {
+    margin-bottom: 80px;
 }
 
 ::selection {

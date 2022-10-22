@@ -32,15 +32,22 @@ body {
     font-size: clamp(0.7rem, 4vw, $minimumFontSize);
 }
 
-
-h1 {
-    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, $slateLightest, 1.1);
+h1 span {
+    @include font-setup($secondaryFont, clamp(14px, 5vw, 16px), 400, $accentColour, null, 0px)
 }
 
-h1 span {
-    @include font-setup($secondaryFont, clamp(14px, 5vw, 16px), 400, $accentColour)
+h1 {
+    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, $slateLightest, 1.1, 1px);
+}
+
+.hero p {
+    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, null, null, .5px);
 }
 
 h2 {
-    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600);
+    @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, $slateLightest, null, .5px, capitalize, center);
+}
+
+figcaption { 
+    @include font-setup($secondaryFont, .8rem) 
 }

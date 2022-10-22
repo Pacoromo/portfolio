@@ -1,8 +1,33 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .skills-section {
     .heading {
         color: $slateLightest;
+        text-align: center;
+    }
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    gap: 20px;
+    
+}
+
+.skill {
+    border: 1px solid $accentColour;
+    border-radius: $borderRadius;
+    height: 100%;
+    padding: .5em;
+
+    img {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    figcaption {
         text-align: center;
     }
 }

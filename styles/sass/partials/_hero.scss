@@ -8,6 +8,9 @@
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    p {
+        margin: 0;
+    }
 }
 
 h1 {
@@ -17,26 +20,4 @@ h1 {
 h1 span {
     display: block;
     margin: 0px 0px 20px 2px;
-}
-
-h2 {
-    margin: 0;
-}
-
-p {
-    max-width: 600px;
-    margin-bottom: 0;
-}
-
-.more-content-arrow {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
