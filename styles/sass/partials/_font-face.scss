@@ -5,9 +5,9 @@
 //@include font-face(family-name, file-name, weight)
 
 //Calibre Font
-@include font-face($primaryFontRegular, Calibre-Regular, 400);
-@include font-face($primaryFontMedium, Calibre-Medium, 500);
-@include font-face($primaryFontSemiBold, Calibre-Semibold, 600);
+@include font-face("Calibre Regular", Calibre-Regular, 400);
+@include font-face("Calibre Medium", Calibre-Medium, 500);
+@include font-face("Calibre Semi-Bold", Calibre-Semibold, 600);
 
 //SF Mono Font
-@include font-face($secondaryFontRegular, SFMono-Regular, 400);
+@include font-face("SF Mono Regular", SFMono-Regular, 400);

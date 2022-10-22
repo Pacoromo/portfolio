@@ -1,3 +1,6 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
 //Base Font Size
 
 html {
@@ -9,9 +12,24 @@ html {
 // Usage:
 //@include font-setup(family, size, color, line height, letter-spacing, text-transform, text-align)
 
-// body {
+.skip-link {
+    @include font-setup ($secondaryFontRegular, $minimumFontSize)
+}
 
-// }
+body {
+   @include font-setup($primaryFontRegular, $minimumFontSize, $slate);
+   @include breakpoint(smallScreen){
+    font-size: $baseFontSize;
+   }
+    
+ }
+
+ .main-nav {
+    @include font-setup($secondaryFontRegular, 0.7rem, $slateLightest, null, null, capitalize );
+    .side-bar-menu {
+        font-size: clamp(0.7rem, 4vw, $minimumFontSize);
+    }
+ }
 
 
 // h2 {

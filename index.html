@@ -17,37 +17,50 @@
 </head>
 
 <body>
+    <a href="#content" class="skip-link">Skip to Content</a>
     <header>
-        <div class="wrapper">
+        <nav class="main-nav">
             <div class="logo-container">
-                <img src="./assets/icons/my-logo.svg" alt="Logo">
+                <a href="https://pacoromo.ca" aria-label="Home"><img src="./assets/icons/my-logo.svg" alt="Logo"></a>
             </div>
-
-            <div class="main-nav-menu-container">
-                <ul class="main-nav-menu">
+            <div class="desktop-nav">
+                <ul class="menu-list">
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="resume-link"><a href="http://">Resume</a></li>
+                    <li><a href="http://" class="resume-link">Resume</a></li>
                 </ul>
             </div>
 
-            <div class="hamburger-btn-container" hidden>
-                <button class="hamburger-btn">
-                    <div class="ham-container">
-                        <div class="ham-inner"></div>
-                    </div>
-                </button>
-            </div>
-        </div>
+            <div class="mobile-nav">
+                <div class="btn-container">
+                    <button class="ham-btn" aria-label="Menu">
+                        <div class="ham-box">
+                            <div class="ham-box-inner"></div>
+                        </div>
+                    </button>
+                </div>
+                <aside class="side-bar-menu">
+                    <nav>
+                        <ul class="menu-list">
+                            <li><a href="#aboutmobile">About</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="http://" class="resume-link">Resume</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div><!-- /mobile menu container-->
+        </nav> <!-- /Main-nav-->
     </header><!-- /Header-->
 
-    <main>
+    <main id="content">
 
     </main>
     <footer>
 
     </footer>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,209 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.skip-link {
+    position: absolute;
+    z-index: 20;
+    top: 0;
+    left: 50%;
+    color: $navy;
+    background-color: $accentColour;
+    border-radius: $borderRadius ;
+    padding: 1em;
+    transform: translate3d(-50%, -100%, 0);
+    transition: $transition;
+
+    &:focus {
+        transform: translate3d(-50%, 0, 0);
+        outline: none;
+        color: $navy;
+    }
+
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include position(fixed, 0, null, null, null);
+    z-index: 10;
+    width: 100%;
+    height: 100px;
+    padding: 0 25px;
+    transition: $transition;
+
+    @include breakpoint(mediumScreen) {
+        padding: 0 40px;
+    }
+
+    @include breakpoint(largeScreen) {
+        padding: 0 50px;
+    }
+}
+
+.logo-container {
+    padding: 9px;
+
+    &:focus-within {
+        outline: 1px dashed $accentColour;
+    }
+
+    a {
+        display: block;
+        width: 42px;
+    }
+}
+
+
+.desktop-nav {
+    display: none;
+
+    @include breakpoint(mediumScreen) {
+        display: block;
+    }
+
+    .menu-list {
+        display: flex;
+        align-items: center;
+
+        li {
+            margin: 0 5px;
+        }
+
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+.resume-link {
+    border: 1px solid $accentColour;
+    border-radius: $borderRadius;
+    padding: .75rem 1rem;
+    margin-left: 15px;
+
+    &:hover {
+        background-color: $accentColourActive;
+    }
+}
+
+
+.mobile-nav {
+    @include breakpoint(mediumScreen) {
+        display: none;
+    }
+
+    .btn-container {
+        position: relative;
+        z-index: 12;
+    }
+}
+
+
+.ham-box {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.ham-box-inner {
+    position: absolute;
+    top: 50%;
+    background-color: $accentColour;
+    border-radius: $borderRadius;
+    width: 100%;
+    height: 2px;
+    transform: translateY(-50%);
+    transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+    transform: rotate(0deg);
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: $accentColour;
+        border-radius: $borderRadius;
+        height: 2px;
+    }
+
+    &::before {
+        width: 120%;
+        top: -10px;
+        right: 0;
+        transition: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+    }
+
+    &::after {
+        bottom: -10px;
+        width: 80%;
+        right: 0;
+        transition: bottom 0.1s ease-in 0.25s, width 0.1s ease-out, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+}
+
+.ham-btn {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+
+    &:focus-visible {
+        outline: 1px dashed $accentColour;
+    }
+
+    &.active {
+        .ham-box-inner {
+            transform: rotate(225deg);
+            transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+
+            &::before {
+                top: 0;
+                opacity: 0;
+                transition: top 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+            }
+
+            &::after {
+                bottom: 0;
+                width: 100%;
+                transform: rotate(-90deg);
+                transition: bottom 0.1s ease-out, width 0.1s ease-out, transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+            }
+        }
+    }
+
+}
+
+.side-bar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 11;
+    width: min(70vw, 400px);
+    min-height: 100vh;
+    background-color: $navyLight;
+    box-shadow: -10px 0px 30px -15px $navyDark;
+    padding: 2em;
+    visibility: hidden;
+    transition: $transition;
+
+    &.active {
+        right: 0;
+        visibility: visible;
+    }
+
+    .menu-list {
+        text-align: center;
+
+        li {
+            margin-bottom: 3em;
+        }
+    }
+
+    .resume-link {
+        margin: 3em 0 0;
+    }
+
+}

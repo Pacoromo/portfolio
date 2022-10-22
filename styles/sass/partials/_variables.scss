@@ -4,21 +4,28 @@
 $navy: #0a192f;
 $navyLight: #112240;
 $navyLightest: #233554;
+$navyDark: #020c1b;
 $slate: #8892b0;
 $slateLight: #a8b2d1;
 $slateLightest: #ccd6f6;
 $white: #e6f1ff;
 $accentColour: #64ffda;
+$accentColourActive : #123040;
 
 //Fonts
 
 $baseFontSize: 1rem; //(20px)
-$minimumFontSize: .8rem; //(16px)
+$minimumFontSize: .9rem; //(18px)
 
 $primaryFontRegular: "Calibre Regular", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 $primaryFontMedium: "Calibre Medium", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 $primaryFontSemiBold: "Calibre Semi-Bold", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
 
-$secondaryFontRegular: "SF Mono Regular" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+$secondaryFontRegular: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 // $secondaryFontMedium: "SF Mono Medium" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
 // $secondaryFontSemiBold: "SF Mono Semi-Bold" "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+//Miscellaneous
+
+$transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+$borderRadius: 4px;
