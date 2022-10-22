@@ -1,0 +1,8 @@
+@use "./variables" as *;
+
+.skills-section {
+    .heading {
+        color: $slateLightest;
+        text-align: center;
+    }
+}
