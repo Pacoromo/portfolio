@@ -159,7 +159,7 @@
         outline: 1px dashed $accentColour;
     }
 
-    &.active {
+    &.active-side-bar {
         .ham-box-inner {
             transform: rotate(225deg);
             transition: transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
@@ -181,11 +181,13 @@
 
 }
 
+
+
 .side-bar-menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 0;
     right: -100%;
     z-index: 11;
@@ -197,7 +199,7 @@
     visibility: hidden;
     transition: $transition;
 
-    &.active {
+    &.active-side-bar {
         right: 0;
         visibility: visible;
     }
@@ -216,7 +218,13 @@
 
 }
 
-.content-container.active {
+//Hide Scroll bar and blur content behind bar
+
+body.active-side-bar{
+    overflow: hidden;
+}
+
+.content-container.active-side-bar {
     filter: blur(5px) brightness(0.7);
     pointer-events: none;
     transition: $transition;

@@ -9,25 +9,31 @@
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
-    gap: 20px;
-    
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -10px;
 
-.skill {
-    border: 1px solid $accentColour;
-    border-radius: $borderRadius;
-    height: 100%;
-    padding: .5em;
-
-    img {
-        width: 75%;
-        margin: 0 auto;
+    .skill {
+        flex: 1 0 120px;
+        max-width: 150px;
+        margin: 10px;
+        background-color: $accentColourActive;
     }
 
-    figcaption {
-        text-align: center;
+    figure {
+        border: 1px solid $accentColour;
+        border-radius: $borderRadius;
+        height: 100%;
+        padding: .5em;
+
+        img {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        figcaption {
+            text-align: center;
+        }
     }
 }
