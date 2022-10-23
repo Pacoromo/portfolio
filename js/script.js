@@ -1,5 +1,15 @@
 const app = {};
 
+app.options = {
+    root: null,
+    rootMargin: "0px 0px",
+    threshold: 0.5
+}
+
+app.observer = new IntersectionObserver(beTouching, options);
+app.observer.observe();
+
+
 //Listeners
 app.listeners = () => {
     app.body = document.querySelector("body");
@@ -9,6 +19,7 @@ app.listeners = () => {
 
     const mobileNav = document.querySelector(".mobile-nav");
     const mobileMenuLinks = document.querySelectorAll(".side-bar-menu a");
+    const skills = document.querySelectorAll(".social-side-bar li");
 
     //Menu button
     app.menuBtn.addEventListener("click", app.toggleElementsOnActiveSidebar);
@@ -33,6 +44,12 @@ app.listeners = () => {
         if (this.innerWidth >= 768 && app.menuBtn.classList.contains("active-side-bar")) {
             app.toggleElementsOnActiveSidebar();
         }
+    });
+
+    //Observe elements to animate
+    skills.forEach(element => {
+        observer.observe(element);
+        console.log(element);
     });
 };
 

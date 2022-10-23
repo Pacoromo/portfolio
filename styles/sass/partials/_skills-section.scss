@@ -19,6 +19,9 @@
         max-width: 150px;
         margin: 10px;
         background-color: $accentColourActive;
+        &.fade-in{
+            animation: 1s fade-in-bottom;
+        }
     }
 
     figure {

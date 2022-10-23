@@ -784,6 +784,10 @@ h1 span {
   margin: 10px;
   background-color: #123040;
 }
+.skills-container .skill.fade-in {
+  -webkit-animation: 1s fade-in-bottom;
+          animation: 1s fade-in-bottom;
+}
 .skills-container figure {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -804,4 +808,30 @@ h1 span {
 .skills-container figure figcaption {
   margin-top: auto;
   text-align: center;
+}
+
+@-webkit-keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
