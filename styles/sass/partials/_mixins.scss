@@ -83,14 +83,9 @@
 //}
 
 @mixin breakpoint($point) {
-    @if $point ==xlargeScreen {
-        @media only screen and (min-width: 1200px) {
-            @content;
-        }
-    }
-
-    @else if $point ==largeScreen {
-        @media only screen and (min-width: 992px) {
+    
+    @if $point ==smallScreen {
+        @media only screen and (min-width: 576px) {
             @content;
         }
     }
@@ -101,8 +96,14 @@
         }
     }
 
-    @else if $point ==smallScreen {
-        @media only screen and (min-width: 576px) {
+    @else if $point ==largeScreen {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==xlargeScreen {
+        @media only screen and (min-width: 1200px) {
             @content;
         }
     }
