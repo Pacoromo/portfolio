@@ -1,12 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.skills-section {
-    .heading {
-        color: $slateLightest;
-        text-align: center;
-    }
-}
 
 .skills-container {
     display: flex;
@@ -19,8 +13,9 @@
         max-width: 150px;
         margin: 10px;
         background-color: $accentColourActive;
-        &.fade-in{
-            animation: 1s fade-in-bottom;
+
+        &.active-fade-in {
+            animation: 1s fade-in-bottom forwards;
         }
     }
 
