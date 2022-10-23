@@ -32,6 +32,10 @@ body {
     font-size: clamp(0.7rem, 4vw, $minimumFontSize);
 }
 
+// .social-side-bar {
+//     @include font-setup()
+// }
+
 h1 span {
     @include font-setup($secondaryFont, clamp(14px, 5vw, 16px), 400, $accentColour, null, 0px)
 }
@@ -48,6 +52,6 @@ h2 {
     @include font-setup($primaryFont, clamp(40px, 8vw, 80px), 600, $slateLightest, null, .5px, capitalize, center);
 }
 
-figcaption { 
-    @include font-setup($secondaryFont, .8rem) 
+figcaption {
+    @include font-setup($secondaryFont, .8rem)
 }

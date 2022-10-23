@@ -1,0 +1,48 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.social-side-bar {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    width: 10vw;
+
+    @include breakpoint(mediumScreen) {
+        display: block;
+    }
+
+    ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    li:first-child:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -170px;
+        left: 50%;
+        background-color: $accentColour;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 150px;
+    }
+
+    a {
+        padding: 10px;
+
+        &:hover {
+            color: $accentColour;
+            transform: translateY(-2px);
+        }
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
