@@ -512,6 +512,18 @@ section {
   color: #0a192f;
 }
 
+body.active-side-bar {
+  overflow: hidden;
+}
+
+.content-container.active-side-bar {
+  -webkit-filter: blur(5px) brightness(0.7);
+          filter: blur(5px) brightness(0.7);
+  pointer-events: none;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -718,18 +730,6 @@ section {
 }
 .side-bar-menu .resume-link {
   margin: 3em 0 0;
-}
-
-body.active-side-bar {
-  overflow: hidden;
-}
-
-.content-container.active-side-bar {
-  -webkit-filter: blur(5px) brightness(0.7);
-          filter: blur(5px) brightness(0.7);
-  pointer-events: none;
-  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .social-side-bar {

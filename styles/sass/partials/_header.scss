@@ -18,7 +18,18 @@
         outline: none;
         color: $navy;
     }
+}
 
+//Hide Scroll bar and blur content behind bar
+
+body.active-side-bar {
+    overflow: hidden;
+}
+
+.content-container.active-side-bar {
+    filter: blur(5px) brightness(0.7);
+    pointer-events: none;
+    transition: $transition;
 }
 
 .main-nav {
@@ -55,7 +66,6 @@
         width: 42px;
     }
 }
-
 
 .desktop-nav {
     display: none;
@@ -95,7 +105,6 @@
     }
 }
 
-
 .mobile-nav {
     @include breakpoint(mediumScreen) {
         display: none;
@@ -106,7 +115,6 @@
         z-index: 12;
     }
 }
-
 
 .ham-box {
     position: relative;
@@ -181,8 +189,6 @@
 
 }
 
-
-
 .side-bar-menu {
     display: flex;
     justify-content: center;
@@ -215,17 +221,4 @@
     .resume-link {
         margin: 3em 0 0;
     }
-
-}
-
-//Hide Scroll bar and blur content behind bar
-
-body.active-side-bar{
-    overflow: hidden;
-}
-
-.content-container.active-side-bar {
-    filter: blur(5px) brightness(0.7);
-    pointer-events: none;
-    transition: $transition;
 }
