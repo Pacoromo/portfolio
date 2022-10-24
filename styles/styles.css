@@ -884,7 +884,7 @@ h1 span {
     padding: 0;
   }
   .project .project-content .project-description {
-    background-color: #112240;
+    background-color: rgba(17, 34, 64, 0.9);
     padding: 20px;
     border-radius: 4px;
   }
@@ -919,7 +919,7 @@ h1 span {
 }
 @media only screen and (min-width: 768px) {
   .project:nth-of-type(2n) .project-image {
-    grid-area: 1/6/-1/-1;
+    grid-area: 1/7/-1/-1;
   }
 }
 
@@ -1000,8 +1000,8 @@ h1 span {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   height: 100%;
-  -o-object-fit: screen;
-     object-fit: screen;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -1010,7 +1010,6 @@ h1 span {
     mix-blend-mode: multiply;
     -webkit-filter: contrast(0.4) brightness(90%);
             filter: contrast(0.4) brightness(90%);
-    position: relative;
   }
 }
 

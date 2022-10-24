@@ -39,7 +39,7 @@
             padding: 0;
 
             .project-description {
-                background-color: $navyLight;
+                background-color: rgba($color: $navyLight , $alpha: .9);
                 padding: 20px;
                 border-radius: $borderRadius;
             }
@@ -76,7 +76,7 @@
 
         .project-image {
             @include breakpoint(mediumScreen) {
-                grid-area: 1/6/-1/-1;
+                grid-area: 1/7/-1/-1;
             }
         }
     }
@@ -156,13 +156,12 @@
     img {
         filter: blur(1px);
         height: 100%;
-        object-fit: screen;
+        object-fit: cover;
         transition: $transition;
 
         @include breakpoint(mediumScreen) {
             mix-blend-mode: multiply;
             filter: contrast(.4) brightness(90%);
-            position: relative;
         }
     }
 }
