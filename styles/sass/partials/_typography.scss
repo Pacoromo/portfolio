@@ -74,10 +74,34 @@ h3 {
 }
 
 figcaption {
-    @include font-setup($secondaryFont, .8rem)
+    @include font-setup($secondaryFont, .8rem, 400)
 }
 
+.project-tech-list {
+    @include font-setup($secondaryFont, .65rem, 400)
+}
 
-.project-tech-list{
-    @include font-setup($secondaryFont, .65rem)
+input,
+textarea {
+    @include font-setup($secondaryFont, .8rem, 400, $accentColour);
+}
+
+button {
+    @include font-setup($secondaryFont, .7rem, 400, $slateLightest);
+    background-color: transparent;
+    border: 1px solid $accentColour;
+    border-radius: $borderRadius;
+    padding: 10px;
+    transition: $transition;
+
+    &:hover,
+    &:focus-visible {
+        color: $accentColour;
+        background-color: $accentColourActive;
+    }
+
+    &:active {
+        color: $navy;
+        background-color: $accentColour;
+    }
 }

@@ -1,0 +1,43 @@
+@use "./variables" as *;
+
+.contact-section {
+    scroll-margin-top: 40px;
+}
+
+.contact-form {
+
+
+    fieldset {
+        // display: flex;
+        // flex-direction: column;
+        border: none;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        background-color: $accentColourActive;
+        border: 1px solid $accentColour;
+        padding: .3em .5em;
+        margin-bottom: 20px;
+
+        &:focus {
+            outline: 2px solid $accentColour;
+        }
+    }
+
+    input {
+        max-width: 400px;
+    }
+
+    textarea {
+        resize: none;
+        height: 10em;
+    }
+
+    button {
+        display: block;
+        width: 75px;
+        margin: 2em auto 0;
+    }
+}

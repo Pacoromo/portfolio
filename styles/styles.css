@@ -375,11 +375,42 @@ h3 {
 figcaption {
   font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 0.8rem;
+  font-weight: 400;
 }
 
 .project-tech-list {
   font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 0.65rem;
+  font-weight: 400;
+}
+
+input,
+textarea {
+  font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #64ffda;
+}
+
+button {
+  font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #ccd6f6;
+  background-color: transparent;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  padding: 10px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+button:hover, button:focus-visible {
+  color: #64ffda;
+  background-color: #123040;
+}
+button:active {
+  color: #0a192f;
+  background-color: #64ffda;
 }
 
 h1,
@@ -392,7 +423,8 @@ h5 {
 
 ul,
 li,
-figure {
+figure,
+fieldset {
   margin: 0;
   padding: 0;
 }
@@ -783,7 +815,7 @@ h1 span {
 }
 
 .about-section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 40px;
 }
 .about-section .content {
   max-width: 550px;
@@ -834,6 +866,10 @@ h1 span {
   text-align: center;
 }
 
+.portfolio-section {
+  scroll-margin-top: 40px;
+}
+
 .project {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -854,7 +890,27 @@ h1 span {
             align-items: center;
   }
 }
-.project .project-content {
+@media only screen and (min-width: 768px) {
+  .project:nth-of-type(2n) .project-content {
+    grid-area: 1/1/-1/9;
+    text-align: left;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .project:nth-of-type(2n) .project-content {
+    grid-area: 1/1/-1/7;
+  }
+}
+.project:nth-of-type(2n) .project-content .project-tech-list li:first-of-type {
+  margin-left: 0;
+}
+@media only screen and (min-width: 768px) {
+  .project:nth-of-type(2n) .project-image {
+    grid-area: 1/7/-1/-1;
+  }
+}
+
+.project-content {
   color: #a8b2d1;
   grid-area: 1/1/-1/-1;
   display: -webkit-box;
@@ -876,49 +932,27 @@ h1 span {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 @media only screen and (min-width: 768px) {
-  .project .project-content {
+  .project-content {
     grid-area: 1/5/-1/-1;
     text-align: right;
     background: transparent;
     border: none;
     padding: 0;
   }
-  .project .project-content .project-description {
+  .project-content .project-description {
     background-color: rgba(17, 34, 64, 0.9);
     padding: 20px;
     border-radius: 4px;
   }
-  .project .project-content h3 {
+  .project-content h3 {
     margin: 10px 0;
   }
-  .project .project-content p {
+  .project-content p {
     margin-top: 10px;
   }
 }
 @media only screen and (min-width: 992px) {
-  .project .project-content {
-    grid-area: 1/7/-1/-1;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .project:nth-of-type(2n) .project-content {
-    grid-area: 1/1/-1/9;
-    text-align: left;
-  }
-  .project:nth-of-type(2n) .project-content .project-tech-list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .project:nth-of-type(2n) .project-content {
-    grid-area: 1/1/-1/7;
-  }
-}
-@media only screen and (min-width: 768px) {
-  .project:nth-of-type(2n) .project-image {
+  .project-content {
     grid-area: 1/7/-1/-1;
   }
 }
@@ -931,20 +965,25 @@ h1 span {
       flex-wrap: wrap;
   margin: 10px 0;
 }
-@media only screen and (min-width: 768px) {
-  .project-tech-list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-}
 .project-tech-list li {
-  margin: 0 20px 5px 0;
+  margin: 0 20px 0 0;
+}
+@media only screen and (min-width: 768px) {
+  .project-tech-list li {
+    margin: 0 0 0 20px;
+  }
+  .project-tech-list li:first-of-type {
+    margin-left: auto;
+  }
 }
 
 .project-links {
   margin-left: -10px;
+}
+@media only screen and (min-width: 768px) {
+  .project-links {
+    margin-right: -10px;
+  }
 }
 .project-links a {
   padding: 10px;
@@ -957,8 +996,6 @@ h1 span {
 .project-image {
   grid-area: 1/1/-1/-1;
   z-index: -1;
-  border-radius: 4px;
-  overflow: hidden;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 255, 218, 0.1)), to(rgba(100, 255, 218, 0.1))), rgba(10, 25, 47, 0.9);
   background: linear-gradient(rgba(100, 255, 218, 0.1), rgba(100, 255, 218, 0.1)), rgba(10, 25, 47, 0.9);
 }
@@ -975,6 +1012,9 @@ h1 span {
   width: 100%;
   height: 100%;
   background-color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  overflow: hidden;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -1008,9 +1048,41 @@ h1 span {
 @media only screen and (min-width: 768px) {
   .project-image img {
     mix-blend-mode: multiply;
-    -webkit-filter: contrast(0.4) brightness(90%);
-            filter: contrast(0.4) brightness(90%);
+    -webkit-filter: grayscale(10) contrast(0.9) brightness(0.8);
+            filter: grayscale(10) contrast(0.9) brightness(0.8);
   }
+}
+
+.contact-section {
+  scroll-margin-top: 40px;
+}
+
+.contact-form fieldset {
+  border: none;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: #123040;
+  border: 1px solid #64ffda;
+  padding: 0.3em 0.5em;
+  margin-bottom: 20px;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #64ffda;
+}
+.contact-form input {
+  max-width: 400px;
+}
+.contact-form textarea {
+  resize: none;
+  height: 10em;
+}
+.contact-form button {
+  display: block;
+  width: 75px;
+  margin: 2em auto 0;
 }
 
 @-webkit-keyframes fade-in-bottom {
