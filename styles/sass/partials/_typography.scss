@@ -86,7 +86,7 @@ textarea {
     @include font-setup($secondaryFont, .8rem, 400, $accentColour);
 }
 
-button {
+button:not(.ham-btn) {
     @include font-setup($secondaryFont, .7rem, 400, $slateLightest);
     background-color: transparent;
     border: 1px solid $accentColour;

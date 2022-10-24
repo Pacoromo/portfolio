@@ -392,7 +392,7 @@ textarea {
   color: #64ffda;
 }
 
-button {
+button:not(.ham-btn) {
   font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   font-size: 0.7rem;
   font-weight: 400;
@@ -404,11 +404,11 @@ button {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-button:hover, button:focus-visible {
+button:not(.ham-btn):hover, button:not(.ham-btn):focus-visible {
   color: #64ffda;
   background-color: #123040;
 }
-button:active {
+button:not(.ham-btn):active {
   color: #0a192f;
   background-color: #64ffda;
 }
