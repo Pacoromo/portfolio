@@ -117,6 +117,10 @@
     overflow: hidden;
     background: linear-gradient(rgba($color: $accentColour, $alpha: .1), rgba($color: $accentColour, $alpha: .1)), rgba($color: $navy, $alpha: .9);
 
+    &:hover{
+        z-index: 0;
+    }
+
     @include breakpoint(mediumScreen) {
         grid-area: 1/1/-1/8;
     }
