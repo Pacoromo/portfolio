@@ -51,8 +51,6 @@ a.hover-underline {
     &::after {
         content: "";
         display: block;
-        position: absolute;
-        bottom: 2px;
         height: 1px;
         width: 0%;
         background-color: $accentColour;

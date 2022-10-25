@@ -467,8 +467,6 @@ a.hover-underline {
 a.hover-underline::after {
   content: "";
   display: block;
-  position: absolute;
-  bottom: 2px;
   height: 1px;
   width: 0%;
   background-color: #64ffda;
@@ -1154,9 +1152,6 @@ footer ul {
   footer ul {
     display: none;
   }
-}
-footer a {
-  padding: 10px 0;
 }
 footer svg {
   width: 20px;
