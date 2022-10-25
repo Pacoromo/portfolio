@@ -44,6 +44,28 @@ a:focus {
     outline: none;
 }
 
+a.hover-underline {
+    position: relative;
+    color: $accentColour;
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 2px;
+        height: 1px;
+        width: 0%;
+        background-color: $accentColour;
+        transition: $transition;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
 button {
     cursor: pointer;
 }
@@ -63,12 +85,14 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
-    @include breakpoint(mediumScreen){
+
+    @include breakpoint(mediumScreen) {
         width: 80%;
     }
 }
 
 section {
+    scroll-margin-top: 40px;
     padding: 60px 0;
 }
 

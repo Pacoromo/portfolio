@@ -1,10 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.contact-section {
-    scroll-margin-top: 40px;
-}
-
 .contact-form {
 
     .form-inputs {
@@ -58,7 +54,8 @@
     textarea {
         resize: none;
         height: 10em;
-        @include breakpoint(largeScreen){
+
+        @include breakpoint(largeScreen) {
             width: 60%;
         }
     }

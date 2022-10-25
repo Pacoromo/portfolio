@@ -454,6 +454,25 @@ a:focus {
   outline: none;
 }
 
+a.hover-underline {
+  position: relative;
+  color: #64ffda;
+}
+a.hover-underline::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 2px;
+  height: 1px;
+  width: 0%;
+  background-color: #64ffda;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+a.hover-underline:hover::after {
+  width: 100%;
+}
+
 button {
   cursor: pointer;
 }
@@ -479,6 +498,7 @@ body {
 }
 
 section {
+  scroll-margin-top: 40px;
   padding: 60px 0;
 }
 
@@ -815,11 +835,8 @@ h1 span {
   margin: 0px 0px 20px 2px;
 }
 
-.about-section {
-  scroll-margin-top: 40px;
-}
 .about-section .content {
-  max-width: 550px;
+  max-width: 570px;
 }
 
 .skills-container {
@@ -865,10 +882,6 @@ h1 span {
 .skills-container figure figcaption {
   margin-top: auto;
   text-align: center;
-}
-
-.portfolio-section {
-  scroll-margin-top: 40px;
 }
 
 .project {
@@ -1052,10 +1065,6 @@ h1 span {
     -webkit-filter: grayscale(10) contrast(0.9) brightness(0.8);
             filter: grayscale(10) contrast(0.9) brightness(0.8);
   }
-}
-
-.contact-section {
-  scroll-margin-top: 40px;
 }
 
 @media only screen and (min-width: 992px) {

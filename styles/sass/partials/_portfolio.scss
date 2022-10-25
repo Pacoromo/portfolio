@@ -1,10 +1,6 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-.portfolio-section {
-    scroll-margin-top: 40px;
-}
-
 .project {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
