@@ -3,11 +3,6 @@
 
 .contact-form {
 
-    
-    &.active-fade-in {
-        animation: 1s fade-in-bottom forwards;
-    }
-
     .form-inputs {
         @include breakpoint(largeScreen) {
             display: flex;
