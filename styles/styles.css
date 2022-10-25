@@ -401,7 +401,7 @@ button:not(.ham-btn) {
   background-color: transparent;
   border: 1px solid #64ffda;
   border-radius: 4px;
-  padding: 10px;
+  padding: 1.25em 1.75em;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -412,6 +412,12 @@ button:not(.ham-btn):hover, button:not(.ham-btn):focus-visible {
 button:not(.ham-btn):active {
   color: #0a192f;
   background-color: #64ffda;
+}
+
+footer {
+  font-family: "SF Mono Regular", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: 0.65rem;
+  font-weight: 400;
 }
 
 h1,
@@ -469,7 +475,7 @@ a.hover-underline::after {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-a.hover-underline:hover::after {
+a.hover-underline:hover::after, a.hover-underline:focus-visible::after {
   width: 100%;
 }
 
@@ -1067,6 +1073,10 @@ h1 span {
   }
 }
 
+.contact-form.active-fade-in {
+  -webkit-animation: 1s fade-in-bottom forwards;
+          animation: 1s fade-in-bottom forwards;
+}
 @media only screen and (min-width: 992px) {
   .contact-form .form-inputs {
     display: -webkit-box;
@@ -1121,8 +1131,38 @@ h1 span {
 }
 .contact-form button {
   display: block;
-  width: 75px;
   margin: 2em auto 0;
+}
+
+footer {
+  padding: 1em;
+  border-top: 1px solid #233554;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  footer ul {
+    display: none;
+  }
+}
+footer a {
+  padding: 10px;
+}
+footer svg {
+  width: 20px;
+  height: 20px;
+}
+footer p {
+  text-align: center;
 }
 
 @-webkit-keyframes fade-in-bottom {

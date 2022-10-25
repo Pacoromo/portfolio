@@ -8,6 +8,7 @@ app.listeners = () => {
     app.slideOutMenu = document.querySelector(".side-bar-menu");
     app.mobileNav = document.querySelector(".mobile-nav");
     app.mobileMenuLinks = document.querySelectorAll(".side-bar-menu a");
+    app.form = document.querySelector("form");
 
     //Menu button
     app.menuBtn.addEventListener("click", app.toggleElementsOnActiveSidebar);
@@ -36,16 +37,21 @@ app.listeners = () => {
             app.toggleElementsOnActiveSidebar();
         }
     });
-};
+
+    //Clear form once submitted
+    window.onbeforeunload = () => {
+        app.form.reset();
+    };
+};//Listeners
 
 //Toggle elements on active Sidebar
 
 app.toggleElementsOnActiveSidebar = () => {
     app.body.classList.toggle("active-side-bar"); //Hide the scroll bar
     app.contentContainer.classList.toggle("active-side-bar"); //Blurs content
-    app.menuBtn.classList.toggle("active-side-bar");
-    app.slideOutMenu.classList.toggle("active-side-bar");
-};
+    app.menuBtn.classList.toggle("active-side-bar");//Hamburger button
+    app.slideOutMenu.classList.toggle("active-side-bar");//Menu slide in/out
+};//Toggler
 
 //Observers
 
@@ -74,8 +80,7 @@ app.startObservers = () => {
         element.style.opacity = 0;
         app.observer.observe(element);
     });
-
-};
+};//Observers
 
 //Initial
 

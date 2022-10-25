@@ -92,7 +92,7 @@ button:not(.ham-btn) {
     background-color: transparent;
     border: 1px solid $accentColour;
     border-radius: $borderRadius;
-    padding: 10px;
+    padding: 1.25em 1.75em;
     transition: $transition;
 
     &:hover,
@@ -105,4 +105,8 @@ button:not(.ham-btn) {
         color: $navy;
         background-color: $accentColour;
     }
+}
+
+footer {
+    @include font-setup($secondaryFont, .65rem, 400)
 }

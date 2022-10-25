@@ -1,0 +1,31 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+footer {
+    padding: 1em;
+    border-top: 1px solid $navyLightest;
+    ul {
+        display: flex;
+        width: 100%;
+        max-width: 300px;
+        justify-content: space-between;
+        margin: 0 auto;
+        @include breakpoint(mediumScreen){
+            display: none;
+        }
+    }
+
+    a {
+        padding: 10px;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+}
