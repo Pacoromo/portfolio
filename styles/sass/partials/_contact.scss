@@ -33,13 +33,14 @@
     }
 
     input {
-        max-width: 325px;
+        max-width: 390px;
 
-        // @include breakpoint(smallScreen) {
-        //     max-width: 350px;
-        // }
         &[name="name"] {
             margin-right: 1em;
+        }
+
+        @include breakpoint(smallScreen) {
+            max-width: 350px;
         }
 
         @include breakpoint(mediumScreen) {

@@ -1101,10 +1101,15 @@ h1 span {
   outline: 2px solid #64ffda;
 }
 .contact-form input {
-  max-width: 325px;
+  max-width: 390px;
 }
 .contact-form input[name=name] {
   margin-right: 1em;
+}
+@media only screen and (min-width: 576px) {
+  .contact-form input {
+    max-width: 350px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .contact-form input {
