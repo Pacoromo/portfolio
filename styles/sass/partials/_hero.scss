@@ -10,16 +10,16 @@
     min-height: 100vh;
     padding: 0;
 
+    h1 {
+        margin: 0 0 10px 0;
+    }
+
+    h1 span {
+        display: block;
+        margin: 0px 0px 20px 2px;
+    }
+
     p {
         margin: 0;
     }
-}
-
-h1 {
-    margin: 0 0 10px 0;
-}
-
-h1 span {
-    display: block;
-    margin: 0px 0px 20px 2px;
 }

@@ -826,17 +826,15 @@ body.active-side-bar {
   min-height: 100vh;
   padding: 0;
 }
-.hero p {
-  margin: 0;
-}
-
-h1 {
+.hero h1 {
   margin: 0 0 10px 0;
 }
-
-h1 span {
+.hero h1 span {
   display: block;
   margin: 0px 0px 20px 2px;
+}
+.hero p {
+  margin: 0;
 }
 
 .about-section .content {

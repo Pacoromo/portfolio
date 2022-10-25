@@ -119,8 +119,7 @@
         <main id="content">
             <section class="hero">
                 <h1><span>Hi, I'm</span>Paco Romo.</h1>
-
-                <p>I code for the web.</p>
+                <p>I code <span class="auto-type"></span></p>
             </section>
             <!-- /Hero-->
 
@@ -524,6 +523,15 @@
     </div>
     <!-- /Content & Wrapper-->
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["for the web.", "for fun.", "for the love of it!"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+    </script>
 </body>
 
 </html>
