@@ -370,6 +370,7 @@ h3 {
   font-weight: 600;
   color: #ccd6f6;
   text-transform: capitalize;
+  text-shadow: 1px 1px black;
 }
 
 figcaption {
@@ -940,7 +941,7 @@ h1 span {
     padding: 0;
   }
   .project-content .project-description {
-    background-color: rgba(17, 34, 64, 0.9);
+    background-color: rgba(17, 34, 64, 0.95);
     padding: 20px;
     border-radius: 4px;
   }
@@ -1057,8 +1058,20 @@ h1 span {
   scroll-margin-top: 40px;
 }
 
+@media only screen and (min-width: 992px) {
+  .contact-form .form-inputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .contact-form fieldset {
   border: none;
+}
+@media only screen and (min-width: 992px) {
+  .contact-form fieldset {
+    width: 40%;
+  }
 }
 .contact-form input,
 .contact-form textarea {
@@ -1073,11 +1086,29 @@ h1 span {
   outline: 2px solid #64ffda;
 }
 .contact-form input {
-  max-width: 400px;
+  max-width: 325px;
+}
+.contact-form input[name=name] {
+  margin-right: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .contact-form input {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .contact-form input {
+    width: 90%;
+  }
 }
 .contact-form textarea {
   resize: none;
   height: 10em;
+}
+@media only screen and (min-width: 992px) {
+  .contact-form textarea {
+    width: 60%;
+  }
 }
 .contact-form button {
   display: block;

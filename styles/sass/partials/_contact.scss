@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "./mixins" as *;
 
 .contact-section {
     scroll-margin-top: 40px;
@@ -6,11 +7,20 @@
 
 .contact-form {
 
+    .form-inputs {
+        @include breakpoint(largeScreen) {
+            display: flex;
+        }
+    }
 
     fieldset {
-        // display: flex;
-        // flex-direction: column;
         border: none;
+
+        @include breakpoint(mediumScreen) {}
+
+        @include breakpoint(largeScreen) {
+            width: 40%;
+        }
     }
 
     input,
@@ -27,12 +37,30 @@
     }
 
     input {
-        max-width: 400px;
+        max-width: 325px;
+
+        // @include breakpoint(smallScreen) {
+        //     max-width: 350px;
+        // }
+        &[name="name"] {
+            margin-right: 1em;
+        }
+
+        @include breakpoint(mediumScreen) {
+            width: 40%;
+        }
+
+        @include breakpoint(largeScreen) {
+            width: 90%;
+        }
     }
 
     textarea {
         resize: none;
         height: 10em;
+        @include breakpoint(largeScreen){
+            width: 60%;
+        }
     }
 
     button {

@@ -70,7 +70,8 @@ h2 {
 }
 
 h3 {
-    @include font-setup($primaryFont, clamp(1.2rem, 5vw, 1.4rem), 600, $slateLightest, null, null, capitalize)
+    @include font-setup($primaryFont, clamp(1.2rem, 5vw, 1.4rem), 600, $slateLightest, null, null, capitalize);
+    text-shadow: 1px 1px black
 }
 
 figcaption {
