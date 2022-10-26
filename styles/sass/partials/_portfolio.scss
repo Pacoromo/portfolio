@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     overflow: hidden;
+    height: min-content;
     margin: 0 0 60px;
 
     &:last-of-type {

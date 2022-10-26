@@ -890,6 +890,9 @@ body.active-side-bar {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   overflow: hidden;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   margin: 0 0 60px;
 }
 .project:last-of-type {
