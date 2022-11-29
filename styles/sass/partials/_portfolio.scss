@@ -132,7 +132,7 @@
     }
 
     @include breakpoint(mediumScreen) {
-        position: absolute;
+        position: initial;
         grid-area: 1/1/-1/8;
     }
 
@@ -161,7 +161,7 @@
 
     .image-container {
         height: 100%;
-
+        width: 100%;
         @include breakpoint(mediumScreen) {
             height: auto;
         }
@@ -170,7 +170,6 @@
     img {
         filter: blur(1px);
         height: 100%;
-        width: 100%;
         object-fit: cover;
         transition: $transition;
 

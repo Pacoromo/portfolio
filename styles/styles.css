@@ -1022,7 +1022,7 @@ body.active-side-bar {
 }
 @media only screen and (min-width: 768px) {
   .project-image {
-    position: absolute;
+    position: initial;
     grid-area: 1/1/-1/8;
   }
 }
@@ -1049,6 +1049,7 @@ body.active-side-bar {
 }
 .project-image .image-container {
   height: 100%;
+  width: 100%;
 }
 @media only screen and (min-width: 768px) {
   .project-image .image-container {
@@ -1059,7 +1060,6 @@ body.active-side-bar {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   height: 100%;
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
