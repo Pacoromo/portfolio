@@ -887,6 +887,7 @@ body.active-side-bar {
 }
 
 .project {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   overflow: hidden;
@@ -1010,7 +1011,8 @@ body.active-side-bar {
 }
 
 .project-image {
-  grid-area: 1/1/-1/-1;
+  position: absolute;
+  inset: 0;
   z-index: -1;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 255, 218, 0.1)), to(rgba(100, 255, 218, 0.1))), rgba(10, 25, 47, 0.9);
   background: linear-gradient(rgba(100, 255, 218, 0.1), rgba(100, 255, 218, 0.1)), rgba(10, 25, 47, 0.9);
@@ -1056,6 +1058,7 @@ body.active-side-bar {
   -webkit-filter: blur(1px);
           filter: blur(1px);
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
