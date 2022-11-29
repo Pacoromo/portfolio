@@ -132,7 +132,7 @@
     }
 
     @include breakpoint(mediumScreen) {
-        position: ;
+        position: absolute;
         grid-area: 1/1/-1/8;
     }
 

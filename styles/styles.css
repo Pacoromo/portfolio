@@ -1022,7 +1022,7 @@ body.active-side-bar {
 }
 @media only screen and (min-width: 768px) {
   .project-image {
-    position: initial;
+    position: absolute;
     grid-area: 1/1/-1/8;
   }
 }
