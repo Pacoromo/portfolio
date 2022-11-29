@@ -53,7 +53,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(rgba($color: $accentColour, $alpha: .1), rgba($color: $accentColour, $alpha: .1)), rgba($color: $navy, $alpha: .9);
+    background: linear-gradient(rgba($color: $accentColour, $alpha: .05)), rgba($color: $navy, $alpha: .95);
     border-radius: $borderRadius;
     border: 1px solid $accentColour;
     padding: 40px;
@@ -125,7 +125,7 @@
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(rgba($color: $accentColour, $alpha: .1), rgba($color: $accentColour, $alpha: .1)), rgba($color: $navy, $alpha: .9);
+    background: linear-gradient(rgba($color: $accentColour, $alpha: .1)), rgba($color: $navy, $alpha: .9);
 
     &:hover {
         z-index: 0;
