@@ -906,11 +906,19 @@ body.active-side-bar {
         -ms-flex-align: center;
             align-items: center;
   }
+  .project h3 a {
+    background-color: rgba(10, 25, 47, 0.95);
+    padding-left: 0.5em;
+  }
 }
 @media only screen and (min-width: 768px) {
   .project:nth-of-type(2n) .project-content {
     grid-area: 1/1/-1/9;
     text-align: left;
+  }
+  .project:nth-of-type(2n) .project-content h3 a {
+    padding-right: 0.5em;
+    padding-left: 0;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -937,9 +945,6 @@ body.active-side-bar {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(100, 255, 218, 0.06))), rgba(10, 25, 47, 0.94);
   background: linear-gradient(rgba(100, 255, 218, 0.06)), rgba(10, 25, 47, 0.94);
   border-radius: 4px;

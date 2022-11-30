@@ -8,7 +8,6 @@
     overflow: hidden;
     margin: 0 0 60px;
 
-
     &:last-of-type {
         margin-bottom: 0;
     }
@@ -19,6 +18,11 @@
 
     @include breakpoint(mediumScreen) {
         align-items: center;
+        
+        h3 a {
+            background-color: rgba($color: $navy , $alpha: .95);
+            padding-left: .5em
+        }
     }
 
     &:nth-of-type(2n) {
@@ -26,6 +30,10 @@
             @include breakpoint(mediumScreen) {
                 grid-area: 1/1/-1/9;
                 text-align: left;
+                h3 a {
+                    padding-right: .5em;
+                    padding-left: 0
+                }
             }
 
             @include breakpoint(largeScreen) {
@@ -52,7 +60,6 @@
     grid-area: 1/1/-1/-1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background: linear-gradient(rgba($color: $accentColour, $alpha: .06)), rgba($color: $navy, $alpha: .94);
     border-radius: $borderRadius;
     border: 1px solid $accentColour;
