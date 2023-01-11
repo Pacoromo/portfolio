@@ -44,17 +44,21 @@ a:focus {
     outline: none;
 }
 
-a.hover-underline {
-    position: relative;
+.hover-underline {
     color: $accentColour;
-
+    
     &::after {
+        position: relative;
+        bottom: 4px;
         content: "";
         display: block;
         height: 1px;
         width: 0%;
         background-color: $accentColour;
         transition: $transition;
+        footer & {
+            bottom: 2px;
+        }
     }
 
     &:hover,

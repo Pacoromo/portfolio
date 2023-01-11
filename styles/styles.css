@@ -460,11 +460,12 @@ a:focus {
   outline: none;
 }
 
-a.hover-underline {
-  position: relative;
+.hover-underline {
   color: #64ffda;
 }
-a.hover-underline::after {
+.hover-underline::after {
+  position: relative;
+  bottom: 4px;
   content: "";
   display: block;
   height: 1px;
@@ -473,7 +474,10 @@ a.hover-underline::after {
   -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-a.hover-underline:hover::after, a.hover-underline:focus-visible::after {
+footer .hover-underline::after {
+  bottom: 2px;
+}
+.hover-underline:hover::after, .hover-underline:focus-visible::after {
   width: 100%;
 }
 
